@@ -1,5 +1,6 @@
 public class StringsAndShapes{
 
+    //frame: 8 minutes
     public String frame(int r, int c){
         String retstr = "";
         for (int i = 0; i < r; i++){
@@ -17,6 +18,7 @@ public class StringsAndShapes{
 	return retstr;
     }
 
+    //stringSplosion: 3 minutes
     public String stringSplosion(String str) {
 	String retstr = "";
 	for (int i = 0; i <= str.length(); i++){
@@ -25,6 +27,7 @@ public class StringsAndShapes{
 	return retstr;
     }
 
+    //stringX: 3 minutes
     public String stringX(String str) {
 	String retstr = "";
 	for (int i = 0; i < str.length(); i++){
