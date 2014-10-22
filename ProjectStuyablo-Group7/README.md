@@ -6,9 +6,9 @@ Pd. 2 Mr. Z group 7
 
 Project Assignments:
 
-PRANAB ISLAM — Cowboy.java
-
 TIFFANY (XIUZHEN) LEI — Driver.java
+
+PRANAB ISLAM — Cowboy.java
 
 REMI MOON — Ninja.java
 
