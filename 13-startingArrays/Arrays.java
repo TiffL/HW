@@ -2,7 +2,7 @@ public class Arrays {
 
     public int[] frontPiece(int[] nums) {
 	int[] intArray;
-	if (nums.length > 2){
+	if (nums.length >= 2){
 	    intArray = new int[2];
 	    for (int i = 0; i < 2; i++){
 	        intArray[i] = nums[i];
