@@ -35,7 +35,6 @@ public class CodingBatC{
 		    if (indivlargest > largest){
 			largest = indivlargest;
 		    }
-		    //System.out.println("indivlargest" + indivlargest);
 		}
 		// else{
 		//     backi += 1;
