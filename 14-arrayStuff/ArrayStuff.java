@@ -162,42 +162,6 @@ public class ArrayStuff {
 	return fin;
     }
 
-    public int maxMirror(int[] nums) {
-	int max = 0;
-  
-	int[] con = new int[nums.length];
-	int[] rev = new int[nums.length];
-    
-	for (int fronti= 0; fronti< nums.length; fronti++) {
-	    for (int backi = nums.length -1; backi >= fronti; backi--) {  
-		int len = 0;
-		while (fronti+len < nums.length && backi-len >=0 )  {
-		    con[len] = nums[fronti+len];
-		    rev[len] = nums[backi-len];
-		    len = len+1;
-		}
-       
-		int xlen = 0;
-		for (int k = 0; k < con.length; k++ ) {
-		    if (con[k] == rev[k]) {
-			xlen += + 1;
-		    } else {
-			break;
-		    }
-         
-		}
-     
-		if (max < xlen){
-		    max = xlen;
-		}   
- 
-	    }    
-	}
-  
-	return max;
-
-    }
-
     /*--------------------- Main --------------------*/
     public static void main(String[] args) {
 	ArrayStuff s = new ArrayStuff(10);
