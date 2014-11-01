@@ -15,16 +15,12 @@ public class CodingBatC{
 	for (int i = nums.length-1; i >= 0; i--){
 	    backwards[i] = nums[nums.length-1-i];
 	}
-	System.out.println(this.toString(backwards));
 
-	int fronti = 0;
-	int backi = 0;
-	while (backi < nums.length){
-	    while (fronti < nums.length){
+        for (int backi = 0; backi < nums.length; backi++){
+	    for (int fronti = 0; fronti < nums.length; fronti++){
 		if (nums[fronti] == backwards[backi]){
 		    int indivlargest = 0;
-		    for (int i = 0; i < nums.length-fronti; i++){
-			//System.out.println(nums[fronti+i]);
+		    for (int i=0; i<nums.length-fronti && i<nums.length-backi; i++){
 			if (nums[fronti + i] == backwards[backi + i]){
 			    indivlargest += 1;
 			}
@@ -36,14 +32,7 @@ public class CodingBatC{
 			largest = indivlargest;
 		    }
 		}
-		// else{
-		//     backi += 1;
-		// }
-		fronti += 1;
-		//System.out.println(fronti);
 	    }
-	    backi += 1;
-	    //System.out.println(backi);
 	}
 	return largest;
     }
