@@ -1,6 +1,6 @@
 public class Sarray {
     int[] data;
-    int   last;
+    int   last; // index of last item in list
 
     public Sarray() {
         // set up the initial instance variables
@@ -80,7 +80,7 @@ public class Sarray {
         for (int i = index; i < last; i++){
 	    data[i] = data[i+1];
 	}
-	data[size()-1] = 0;
+	data[last] = 0;
 	return old;
     }
 
