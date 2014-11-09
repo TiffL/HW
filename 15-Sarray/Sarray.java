@@ -51,7 +51,7 @@ public class Sarray {
 
     public int size() {
         // returns the number of items in the list (not the array size)
-	for (int i = data.length - 1; i > 0; i--){
+	for (int i = data.length - 1; i >= 0; i--){
 	    if (data[i] != 0){
 		return i + 1;
 	    }
