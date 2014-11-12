@@ -13,7 +13,7 @@ public class Sarray {
         // returns true
 	int[] newdata;
 	if (size() == data.length){
-	    newdata = new int[size() + 1];
+	    newdata = new int[size() + 100];
 	    for (int n = 0; n < data.length; n++){
 		newdata[n] = data[n];
 	    }
@@ -29,14 +29,16 @@ public class Sarray {
     public void  add(int index, int i){
         // adds item i  at index, shifting everything down as needed.
         // also grows as needed 
+	IndexBounds(index);
+
 	int[] newdata;
 	if (size() == data.length){
-	    newdata = new int[size()+1];
+	    newdata = new int[size() + 100];
 	    for (int a = 0; a < index; a++){
 		newdata[a] = data[a];
 	    }
 	    newdata[index] = i;
-	    for (int a = index+1; a < newdata.length; a++){
+	    for (int a = index+1; a < data.length+1; a++){
 		newdata[a] = data[a-1];
 	    }
 	    data = newdata;
@@ -61,12 +63,16 @@ public class Sarray {
 
     public int get(int index) {
         // returns the item at location index of the list
+	IndexBounds(index);
+
 	return data[index];
     }
 
     public int set(int index, int i){
         // sets the item at location index to value i
         // returns the old value. 
+	IndexBounds(index);
+
 	int oldvalue = data[index];
 	data[index] = i;
 	return oldvalue;
@@ -75,6 +81,8 @@ public class Sarray {
     public int remove(int index){
         // removes the item at index i
         // returns the old value
+	IndexBounds(index);
+
 	int old = data[index];
 	last = size()-1;
         for (int i = index; i < last; i++){
@@ -82,6 +90,12 @@ public class Sarray {
 	}
 	data[last] = 0;
 	return old;
+    }
+
+    public void IndexBounds(int index){
+	if (index > data.length-1){
+	    throw new IndexOutOfBoundsException();
+	}
     }
 
     public String toString(){

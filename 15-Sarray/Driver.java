@@ -36,6 +36,13 @@ public class Driver{
 
 	System.out.println("\n~~~Test for Get~~~");
 	System.out.println("\nexpecting 3: " + s.get(2)); 
+
+	try{
+	    System.out.println(s.get(1000));
+	}
+	catch(IndexOutOfBoundsException e){
+	    System.out.println("Oops: " + e);
+	}
 	
 	System.out.println("\n~~~Test for Remove~~~");
 	System.out.println("\nexpecting number at index 10 removed and others moved up: ");
