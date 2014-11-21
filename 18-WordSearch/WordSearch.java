@@ -69,7 +69,7 @@ public class WordSearch {
 	int r = row;
 	boolean possibleLoc = true;
 	if ((w.length() + row <= board.length && row >= 0)&&
-	    (col >= 0 && col < board.length)){
+	    (col >= 0 && col < board[0].length)){
 	    for (int i = 0; i < w.length(); i++){
 		if ((board[i+row][col] != '.')&&
 		    (board[i+row][col] != w.charAt(i))){
