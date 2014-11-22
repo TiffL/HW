@@ -328,7 +328,8 @@ public class WordSearch {
 	*/
 
 	//~~~~Test for AddWord~~~~
-	System.out.println(w.addWord("Word"));
+	System.out.println(w.addWord("word"));
+	System.out.println(w.addWord("hello"));
 	System.out.println(w);
     }
 }
