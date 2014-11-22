@@ -47,14 +47,13 @@ public class WordSearch {
 		    c++;
 		}
 	    }
-	    /*
 	    else {
-		System.out.println("illegal overlap");
+		throw new IllegalArgumentException();
+		//System.out.println("illegal overlap");
 	    }
-	    */
 	}
 	else{
-	    throw new IllegalArgumentException();
+	    throw new IndexOutOfBoundsException();
 	    /*
 	    if ((w.length()+col > board[0].length)||(col<0)){
 		System.out.println("illegal column");
@@ -92,14 +91,15 @@ public class WordSearch {
 		    r++;
 		}
 	    }
-	    /*
+
 	    else {
-		System.out.println("illegal overlap");
+		throw new IllegalArgumentException();
+		//System.out.println("illegal overlap");
 	    }
-	    */
+
 	}
 	else{
-	    throw new IllegalArgumentException();
+	    throw new IndexOutOfBoundsException();
 	    /*
 	    if ((w.length()+col > board[0].length)||(col<0)){
 		System.out.println("illegal column");
@@ -139,14 +139,15 @@ public class WordSearch {
 		    c++;
 		}
 	    }
-	    /*
+
 	    else {
-		System.out.println("illegal overlap");
+		throw new IllegalArgumentException();
+		//System.out.println("illegal overlap");
 	    }
-	    */
+
 	}
 	else{
-	    throw new IllegalArgumentException();
+	    throw new IndexOutOfBoundsException();
 	    /*
 	    if ((w.length()+col > board[0].length)||(col<0)){
 		System.out.println("illegal column");
@@ -186,14 +187,15 @@ public class WordSearch {
 		    c--;
 		}
 	    }
-	    /*
+
 	    else {
-		System.out.println("illegal overlap");
+		throw new IllegalArgumentException();
+		//System.out.println("illegal overlap");
 	    }
-	    */
+
 	}
 	else{
-	    throw new IllegalArgumentException();
+	    throw new IndexOutOfBoundsException();
 	    /*
 	    if ((w.length()+col > board[0].length)||(col<0)){
 		System.out.println("illegal column");
@@ -231,6 +233,9 @@ public class WordSearch {
 	    return true;
 	}
 	catch (IllegalArgumentException e){
+	    return false;
+	}
+	catch (IndexOutOfBoundsException e){
 	    return false;
 	}
     }
