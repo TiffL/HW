@@ -1,0 +1,1 @@
+WordSearch appears to be completely working. Currently doing extra tests. 
