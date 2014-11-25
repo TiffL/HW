@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.*;
 public class WordSearch {
 
@@ -240,6 +241,39 @@ public class WordSearch {
 	}
     }
 
+    public void makePuzzle(String f){
+	Scanner sc = null;
+	try {
+	    sc = new Scanner(new File(f));
+	} catch (Exception e) {
+	    System.out.println("File not found");
+	    System.exit(0);
+	}
+
+	while (sc.hasNext()){
+	    String s = sc.next();
+	    boolean added = false;
+	    while (!added){
+		added = addWord(s);
+	    }
+	}
+
+	Random rnd = new Random();
+	String alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        int r = 0;
+	while (r < board.length){
+	    int c = 0;
+	    while (c < board[r].length){
+		if (board[r][c] == '.'){
+		    board[r][c] = alphabet.charAt(rnd.nextInt(alphabet.length()));
+		}
+		c += 1;
+	    }
+	    r += 1;
+	}
+    }
+
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
 	//System.out.println(w);
@@ -330,11 +364,15 @@ public class WordSearch {
 	w.addWordLDB("hola",10,39); // 6. test backwards
 	System.out.println(w);
 
-	*/
-
 	//~~~~Test for AddWord~~~~
 	System.out.println(w.addWord("word"));
 	System.out.println(w.addWord("hello"));
+	System.out.println(w);
+
+	*/
+
+	//~~~~Test for makePuzzle~~~~
+        w.makePuzzle("Words.txt");
 	System.out.println(w);
     }
 }
