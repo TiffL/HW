@@ -6,6 +6,10 @@ public class SuperArray {
 	data = new String[10];
 	last = 0;
     }
+    public SuperArray(int len){
+	data = new String[len];
+	last = 0;
+    }
     public boolean add(String i){
 	// adds an item to the end of the list, grow if needed
 	// returns true
@@ -23,7 +27,6 @@ public class SuperArray {
 	}
 	return true;
     }
-
     public void add(int index, String i){
 	// adds item i at index, shifting everything down as needed.
 	// also grows as needed
@@ -41,13 +44,12 @@ public class SuperArray {
 	    data = newdata;
 	}
 	else{
- 	    for (int a = data.length-1; a > index; a--){
+	    for (int a = data.length-1; a > index; a--){
 		data[a] = data[a-1];
 	    }
 	    data[index] = i;
 	}
     }
-
     public int size() {
 	// returns the number of items in the list (not the array size)
 	for (int i = data.length - 1; i >= 0; i--){
