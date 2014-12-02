@@ -2,7 +2,6 @@ public class SuperArray {
     String[] data;
     int last; // index of last item in list
     public SuperArray() {
-	// set up the initial instance variables
 	data = new String[10];
 	last = 0;
     }
