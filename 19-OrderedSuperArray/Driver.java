@@ -11,6 +11,6 @@ public class Driver{
 	System.out.println(s.add("Last"));
 	System.out.println(s.toString()+"\n");
 	System.out.println(s.set(1,"OK"));
-	System.out.println(s.toString()+"\n");
+	System.out.println(s.toString());
     }
 }
