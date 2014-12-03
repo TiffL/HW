@@ -48,8 +48,6 @@ public class OrderedSuperArray extends SuperArray {
 	return true;
     }
     public String set(int index, String i){
-	// sets the item at location index to value i
-	// returns the old value.
 	super.IndexBounds(index);
 	String oldvalue = data[index];
 	super.remove(index);
