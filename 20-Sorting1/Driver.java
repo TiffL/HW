@@ -13,9 +13,7 @@ public class Driver{
 	s.add("mountain");
 	
 	System.out.println("Original: " + s.toString()+ "\n");
-
-	s.isort();
-
+	s.bsort();
 	System.out.println("Sorted: " + s.toString()+ "\n");
 
     }

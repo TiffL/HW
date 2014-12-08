@@ -104,6 +104,35 @@ public class SuperArray {
 	}
     }
 
+    public void ssort(){
+	String current;
+	int minindex;
+	for (int i = 0; i < data.length; i++){
+	    current = data[i];
+	    minindex = i;
+	    for (int j = i; j < data.length; j++){
+		if (data[j].compareTo(data[minindex]) < 0){
+		    minindex = j;
+		}
+	    }
+	    data[i] = data[minindex];
+	    data[minindex] = current;
+	}	    
+    }
+
+    public void bsort(){
+	String current;
+	for (int i = data.length-1; i > 0; i--){
+	    for (int j = 0; j < i; j++){
+		current = data[j];
+		if (data[j+1].compareTo(current) < 0){
+		    data[j] = data[j+1];
+		    data[j+1] = current;
+		}
+	    }
+	}
+    }
+
     public String toString(){
 	String s = "";
 	for (int i = 0; i < data.length; i++) {
