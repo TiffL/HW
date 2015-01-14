@@ -1,0 +1,19 @@
+Project Repo (SuperDuperDoku):
+
+https://github.com/julianjay/APCS-Final-Project
+
+Review:
+
+Sudoku.java:
+- The purpose of the method submit (lines 199-201) is unclear. It seems like it
+  is supposed to do the same thing as checker, in which case it would be repetitive. 
+
+- The checker method (lines 204-207) can also be done in easier ways that don't 
+  require changing the arrays into strings. One way is by using 
+  Arrays.deepEquals(Object[] a, Object[] a2). If you want to stick to what you've
+  learned in class, however, another way is by checking each individual row using 
+  Arrays.equals(Object[] a, Object[] a2). Since you have 9 rows, though, the first 
+  way appears to be better.
+
+Gui.java:
+- Unfinished, but what you are trying to do is clear.
